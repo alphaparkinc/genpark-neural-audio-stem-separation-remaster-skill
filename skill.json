@@ -1,0 +1,38 @@
+{
+  "name": "genpark-neural-audio-stem-separation-remaster-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Neural audio stem separation and mastering engine isolating vocals, bass, drums, and harmonic layers with ultra-low bleed.",
+  "author": "genpark",
+  "category": "audio-separation",
+  "tags": [
+    "demucs",
+    "stem-separation",
+    "audio-mastering",
+    "music-source-separation",
+    "neural-dsp"
+  ],
+  "inputs": {
+    "master_track_audio_url": {
+      "type": "string"
+    },
+    "isolate_stems": {
+      "type": "array"
+    }
+  },
+  "outputs": {
+    "separation_job_id": {
+      "type": "string"
+    },
+    "signal_to_distortion_ratio_sdr_db": {
+      "type": "number"
+    },
+    "artifact_bleed_suppression_pct": {
+      "type": "number"
+    },
+    "isolated_stem_urls": {
+      "type": "object"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
